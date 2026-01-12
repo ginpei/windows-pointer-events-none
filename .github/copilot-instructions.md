@@ -2,7 +2,9 @@
 
 ## Response Behavior
 
-When I ask a question (using phrases like "can you", "is it possible", "how do I"), provide an explanation only. **Do not modify any code.**
+When I ask a question (using phrases like "can you", "is it possible", "how do I", or question marks like "?"), provide an explanation only. **Do not modify any code.**
+
+**Even if you identify problems or suggest improvements in your explanation, do not make any changes unless explicitly instructed.**
 
 Only make code changes when I give explicit instructions using imperative phrases such as:
 - "implement"
