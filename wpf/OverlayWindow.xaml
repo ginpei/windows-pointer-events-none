@@ -5,30 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:wpf"
         mc:Ignorable="d"
-        Title="Overlay" Height="450" Width="800"
+        Title="Overlay"
+        WindowState="Maximized"
         AllowsTransparency="True"
         WindowStyle="None"
         Background="Transparent"
         ShowInTaskbar="False">
     <Grid>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Ellipse Width="100" Height="100" Fill="#FF4CAF50" Margin="10"/>
-            <TextBlock Text="?? Click Through Window" 
-                       FontSize="32" 
-                       FontWeight="Bold"
-                       Foreground="White"
-                       Background="#CC2196F3"
-                       Padding="20"
-                       TextAlignment="Center"
-                       Margin="10"/>
-            <TextBlock Text="pointer-events: none ????" 
-                       FontSize="24" 
-                       Foreground="White"
-                       Background="#CCFF9800"
-                       Padding="15"
-                       TextAlignment="Center"
-                       Margin="10"/>
-            <Rectangle Width="150" Height="50" Fill="#FFE91E63" Margin="10"/>
-        </StackPanel>
+        <Viewbox Stretch="Uniform"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Center">
+            <Canvas x:Name="ClockCanvas" 
+                    Width="100" 
+                    Height="100">
+                <Ellipse Width="100" 
+                         Height="100" 
+                         Stroke="Black" 
+                         StrokeThickness="1.5" 
+                         Fill="White"/>
+                
+                <Line x:Name="HourHand"
+                      X1="50" 
+                      Y1="50" 
+                      X2="50" 
+                      Y2="30"
+                      Stroke="Black" 
+                      StrokeThickness="2"
+                      StrokeStartLineCap="Round"
+                      StrokeEndLineCap="Round"/>
+                
+                <Line x:Name="MinuteHand"
+                      X1="50" 
+                      Y1="50" 
+                      X2="50" 
+                      Y2="20"
+                      Stroke="Black" 
+                      StrokeThickness="1.5"
+                      StrokeStartLineCap="Round"
+                      StrokeEndLineCap="Round"/>
+                
+                <Ellipse Width="4" 
+                         Height="4" 
+                         Canvas.Left="48" 
+                         Canvas.Top="48"
+                         Fill="Black"/>
+            </Canvas>
+        </Viewbox>
     </Grid>
 </Window>
