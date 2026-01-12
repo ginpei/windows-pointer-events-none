@@ -20,13 +20,6 @@
                     FontSize="16"
                     Margin="10"
                     Click="ShowOverlay_Click"/>
-            
-            <Button Content="オーバーレイを非表示" 
-                    Width="200" 
-                    Height="50" 
-                    FontSize="16"
-                    Margin="10"
-                    Click="HideOverlay_Click"/>
         </StackPanel>
     </Grid>
 </Window>

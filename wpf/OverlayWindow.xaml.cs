@@ -3,6 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Interop;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 
 namespace wpf
@@ -31,6 +32,24 @@ namespace wpf
         {
             UpdateClockHands();
             MakeWindowClickThrough();
+            StartFadeOut();
+        }
+
+        private void StartFadeOut()
+        {
+            var fadeOut = new DoubleAnimation
+            {
+                From = Opacity,
+                To = 0,
+                Duration = TimeSpan.FromMilliseconds(3000)
+            };
+
+            fadeOut.Completed += (s, e) =>
+            {
+                Close();
+            };
+
+            BeginAnimation(OpacityProperty, fadeOut);
         }
 
         private void OverlayWindow_SizeChanged(object sender, SizeChangedEventArgs e)

@@ -18,8 +18,6 @@ namespace wpf
     /// </summary>
     public partial class MainWindow : Window
     {
-        private OverlayWindow? overlayWindow;
-
         public MainWindow()
         {
             InitializeComponent();
@@ -27,17 +25,8 @@ namespace wpf
 
         private void ShowOverlay_Click(object sender, RoutedEventArgs e)
         {
-            if (overlayWindow == null || !overlayWindow.IsVisible)
-            {
-                overlayWindow = new OverlayWindow();
-                overlayWindow.Show();
-            }
-        }
-
-        private void HideOverlay_Click(object sender, RoutedEventArgs e)
-        {
-            overlayWindow?.Close();
-            overlayWindow = null;
+            var overlayWindow = new OverlayWindow();
+            overlayWindow.Show();
         }
     }
 }
