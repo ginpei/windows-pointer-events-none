@@ -1,3 +1,7 @@
 <Solution>
+  <Project Path="WinUI/WinUI.csproj" Id="4412398d-85b0-4d92-a29a-996c2fb7f782">
+    <Platform Project="x64" />
+    <Deploy />
+  </Project>
   <Project Path="wpf/wpf.csproj" />
 </Solution>
