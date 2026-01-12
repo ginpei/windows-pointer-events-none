@@ -27,5 +27,11 @@ namespace WinUI
         {
             InitializeComponent();
         }
+
+        private void ShowOverlay_Click(object sender, RoutedEventArgs e)
+        {
+            var overlayWindow = new OverlayWindow();
+            overlayWindow.Activate();
+        }
     }
 }
