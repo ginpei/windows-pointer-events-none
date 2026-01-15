@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="cpp/cpp.vcxproj" Id="870ad1b7-06fd-4199-8188-7628ed8cfd2f" />
   <Project Path="WinUI/WinUI.csproj" Id="4412398d-85b0-4d92-a29a-996c2fb7f782">
     <Platform Project="x64" />
     <Deploy />
