@@ -129,11 +129,13 @@
   <ItemGroup>
     <ClInclude Include="cpp.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="OverlayWindow.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cpp.cpp" />
+    <ClCompile Include="OverlayWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="cpp.rc" />
